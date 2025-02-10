@@ -143,6 +143,10 @@ int main() {
     int turismo31;
     int turismo32;
 
+    // Cadastro das Cartas:
+    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
+    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
+    
     printf("Desafio Super Trunfo!\n");
     printf("Cada país será dividido em oito estados, identificados pelas letras de A a H.\nCada estado terá quatro cidades, numeradas de 1 a 4.\n");
     
@@ -194,12 +198,53 @@ int main() {
     printf("Quantos pontos turísticos terá em A4?\n");
     scanf("%d", &turismo4);
 
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-  
+    printf("Insira quantos habitantes haverão na carta B1:\n");
+    scanf(" %d", &habitantes5);
+
+    printf("Insira quantos habitantes haverão na carta B2:\n");
+    scanf("%d", &habitantes6);
+
+    printf("Insira quantos habitantes haverão na carta B3:\n");
+    scanf("%d", &habitantes7);
+
+    printf("Insira quantos habitantes haverão na carta B4:\n");
+    scanf("%d", &habitantes8);
+
+    printf("Qual será a área da carta B1?\n");
+    scanf("%f", &area5);
+
+    printf("Qual será a área da carta B2?\n");
+    scanf("%f", &area6);
+
+    printf("Qual será a área da carta B3?\n");
+    scanf("%f", &area7);
+
+    printf("Qual será a área da carta B4?\n");
+    scanf("%f", &area8);
+
+    printf("Digite qual será o PIB da carta B1:\n");
+    scanf("%d", &pib5);
+
+    printf("Digite qual será o PIB da carta B2:\n");;
+    scanf("%d", &pib6);
+
+    printf("Digite qual será o PIB da carta B3:\n");
+    scanf("%d", &pib7);
+
+    printf("Digite qual será o PIB da carta B4:\n");
+    scanf("%d", &pib8);
+
+    printf("Quantos pontos turísticos terá em B1?\n");
+    scanf("%d", &turismo5);
+
+    printf("Quantos pontos turísticos terá em B2?\n");
+    scanf("%d", &turismo6);
+
+    printf("Quantos pontos turísticos terá em B3?\n");
+    scanf("%d", &turismo7);
+
+    printf("Quantos pontos turísticos terá em B4?\n");
+    scanf("%d", &turismo8);
 
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
