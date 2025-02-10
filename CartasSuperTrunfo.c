@@ -8,8 +8,6 @@
 
 int main() {
 
-    printf("Desafio Super Trunfo - Países");
-
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     
@@ -144,6 +142,9 @@ int main() {
     int turismo30;
     int turismo31;
     int turismo32;
+
+    printf("Desafio Super Trunfo!\n");
+    printf("Cada país será dividido em oito estados, identificados pelas letras de A a H.\nCada estado terá quatro cidades, numeradas de 1 a 4.\n");
     
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
