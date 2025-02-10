@@ -146,6 +146,55 @@ int main() {
     printf("Desafio Super Trunfo!\n");
     printf("Cada país será dividido em oito estados, identificados pelas letras de A a H.\nCada estado terá quatro cidades, numeradas de 1 a 4.\n");
     
+    printf("Insira quantos habitantes haverão na carta A1:\n");
+    scanf("%d", &habitantes1);
+
+    printf("Insira quantos habitantes haverão na carta A2:\n");
+    scanf("%d", &habitantes2);
+
+    printf("Insira quantos habitantes haverão na carta A3:\n");
+    scanf(" %d", &habitantes3);
+
+    printf("Insira quantos habitantes haverão na carta A4:\n");
+    scanf(" %d", &habitantes4);
+
+    printf("Qual será a área da carta A1?\n");
+    scanf("%f", &area1);
+
+    printf("Qual será a área da carta A2?\n");
+    scanf("%f", &area2);
+
+    printf("Qual será a área da carta A3?\n");
+    scanf("%f", &area3);
+
+    printf("Qual será a área da carta A4?\n");
+    scanf("%f", &area4);
+
+    printf("Digite qual será o PIB da carta A1:\n");
+    scanf("%d", &pib1);
+
+    printf("Digite qual será o PIB da carta A2:\n");
+    scanf("%d", &pib2);
+
+    printf("Digite qual será o PIB da carta A3:\n)");
+    scanf("%d", &pib3);
+
+    printf("Digite qual será o PIB da carta A4:\n");
+    scanf("%d", &pib4);
+
+    printf("Quantos pontos turísticos terá em A1?\n");
+    scanf("%d", turismo1);
+
+    printf("Quantos pontos turísticos terá em A2?\n");
+    scanf("%d", &turismo2);
+
+    printf("Quantos pontos turísticos terá em A3?\n");
+    scanf("%d", &turismo3);
+
+    printf("Quantos pontos turísticos terá em A4?\n");
+    scanf("%d", &turismo4);
+
+    
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
