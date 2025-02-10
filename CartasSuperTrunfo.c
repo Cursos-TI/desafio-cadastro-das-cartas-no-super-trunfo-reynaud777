@@ -390,6 +390,54 @@ int main() {
     printf("Quantos pontos turísticos terá em E4?\n");
     scanf("%d", &turismo20);
 
+    printf("Insira quantos habitantes haverão na carta F1:\n");
+    scanf("%d", &habitantes21);
+
+    printf("Insira quantos habitantes haverão na carta F2:\n");
+    scanf("%d", &habitantes22);
+
+    printf("Insira quantos habitantes haverão na carta F3:\n");
+    scanf("%d", &habitantes23);
+
+    printf("Insira quantos habitantes haverão na carta F4:\n");
+    scanf("%d", &habitantes24);
+
+    printf("Qual será a área da carta F1?\n");
+    scanf("%f", &area21);
+
+    printf("Qual será a área da carta F2?\n");
+    scanf("%f", &area22);
+
+    printf("Qual será a área da carta F3?\n");
+    scanf("%f", &area23);
+
+    printf("Qual será a área da carta F4?\n");
+    scanf("%f", &area24);
+
+    printf("Digite qual será o PIB da carta F1:\n");
+    scanf("%d", &pib21);
+
+    printf("Digite qual será o PIB da carta F2:\n");
+    scanf("%d", &pib22);
+
+    printf("Digite qual será o PIB da carta F3:\n");
+    scanf("%d", &pib23);
+
+    printf("Digite qual será o PIB da carta F4:\n");
+    scanf("%d", &pib24);
+    
+    printf("Quantos pontos turísticos terá em F1?\n");
+    scanf("%d", &turismo21);
+
+    printf("Quantos pontos turísticos terá em F2?\n");
+    scanf("%d", &turismo22);
+
+    printf("Quantos pontos turísticos terá em F3?\n");
+    scanf("%d", &turismo23);
+
+    printf("Quantos pontos turísticos terá em F4?\n");
+    scanf("%d", &turismo24);
+
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
