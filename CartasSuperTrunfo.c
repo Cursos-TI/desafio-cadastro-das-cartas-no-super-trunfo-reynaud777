@@ -92,7 +92,23 @@ int main(){
     printf("PIB per Capita: %.2f reais\n", pibpercapta2);
     printf("Super Poder: %.2f\n\n", superpoderB);
 
+    resultado1 = habitantes1 > habitantes2;
+    resultado2 = area1 > area2;
+    resultado3 = pib1 > pib2;
+    resultado4 = turismo1 > turismo2;
+    resultado5 = densidade1 < densidade2;
+    resultado6 = pibpercapta1 > pibpercapta2;
+    resultado7 = superpoderA > superpoderB;
 
+    printf("Comparando as cartas\n\n");
+    
+    printf("População - %c%d é maior que %c%d? %d\n", cidade1, codigo1, cidade2, codigo2, resultado1);
+    printf("Área - %c%d é maior que %c%d? %d\n", cidade1, codigo1, cidade2, codigo2,resultado2);
+    printf("PIB - %c%d é maior que %c%d? %d\n", cidade1, codigo1, cidade2, codigo2, resultado3);
+    printf("Turismo - %c%d é maior que %c%d? %d\n", cidade1, codigo1, cidade2, codigo2, resultado4);
+    printf("Densidade Populacional - %c%d é menor que %c%d? %d\n", cidade1, codigo1, cidade2, codigo2, resultado5);
+    printf("PIB per Capita - %c%d é maior que %c%d?\n", cidade1, codigo1, cidade2, codigo2, resultado6);
+    printf("Super Poder - %c%d é maior que %c%d? %d\n", cidade1, codigo1, cidade2, codigo2, resultado7);
 
 
 
