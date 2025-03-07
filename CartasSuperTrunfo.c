@@ -70,6 +70,28 @@ int main(){
     superpoderA = (float) (habitantes1 + area1 + turismo1 + pibpercapta1) - densidade1;
     superpoderB = (float) (habitantes2 + area2 + turismo2 + pibpercapta2) - densidade2;
 
+    printf("\n\n Cidade: %c\n", cidade1);
+    printf("Código: %c%d\n", cidade1, codigo1);
+    printf ("Nome da cidade: %s\n", estado1); 
+    printf("População: %d\n", habitantes1); 
+    printf("Área: %.2f\n", area1); 
+    printf("PIB: %.2f\n", pib1);
+    printf("Pontos turísticos: %d\n", turismo1);
+    printf("Densidade Populacional:%.2f hab/km²\n", densidade1);
+    printf("PIB per Capita: %.2f reais\n", pibpercapta1);
+    printf("Super Poder: %.2f\n", superpoderA);
+
+    printf("\n\n Cidade: %c\n", cidade2);
+    printf("Código: %c%d\n", cidade2, codigo2);
+    printf ("Nome da cidade: %s\n", estado2); 
+    printf("População: %d\n", habitantes2); 
+    printf("Área: %.2f\n", area2); 
+    printf("PIB: %.2f\n", pib2);
+    printf("Pontos turísticos: %d\n", turismo2);
+    printf("Densidade Populacional:%.2f hab/km²\n", densidade2);
+    printf("PIB per Capita: %.2f reais\n", pibpercapta2);
+    printf("Super Poder: %.2f\n\n", superpoderB);
+
 
 
 
