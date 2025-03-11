@@ -2,6 +2,7 @@
 
 int main(){
 
+    //tipos e variáveis
 char estado1[20];
 char estado2[20];
 char cidade1, cidade2;
@@ -14,6 +15,11 @@ float pibpercapta1, pibpercapta2;
 float densidade1, densidade2;
 float superpoderA, superpoderB;
 int resultado1, resultado2, resultado3, resultado4, resultado5, resultado6, resultado7;
+
+//scanf = entrada de dados / interacao com o usuario
+//printf = saída de dados
+
+printf("***Desafio Super Trunfo!***\n\n");
 
 printf("Qual será o nome do primeiro Estado?\n");
 scanf(" %s", &estado1[0]);
@@ -57,15 +63,19 @@ scanf("%f", &pib2);
 printf("Quantos pontos turisticos terá na cidade?\n");
 scanf("%d", &turismo2);
 
+//calculo do pibpercapta
 pibpercapta1 = (float) pib1 / habitantes1;
 pibpercapta2 = (float) pib2 / habitantes2;
 
+//calculo da densidade populacional
 densidade1 = (float) habitantes1 / area1;
 densidade2 = (float) habitantes2 / area2;
 
+//calculo do superpoder
 superpoderA = (float) (habitantes1 + area1 + turismo1 + pibpercapta1) - densidade1;
 superpoderB = (float) (habitantes2 + area2 + turismo2 + pibpercapta2) - densidade2;
 
+//visualizacao dos dados da cartas
 printf("\n\n Cidade: %c\n", cidade1);
     printf("Código: %c%lu\n", cidade1, codigo1);
     printf ("Nome da cidade: %s\n", estado1); 
@@ -88,6 +98,9 @@ printf("\n\n Cidade: %c\n", cidade1);
     printf("PIB per Capita: %.2f reais\n", pibpercapta2);
     printf("Super Poder: %.2f\n\n", superpoderB);
 
+    //operadores relacionais
+    //1 = verdadeiro / 0 = falso
+    //maior vence, exceto densidade
     resultado1 = habitantes1 > habitantes2;
     resultado2 = area1 > area2;
     resultado3 = pib1 > pib2;
@@ -96,8 +109,9 @@ printf("\n\n Cidade: %c\n", cidade1);
     resultado6 = pibpercapta1 > pibpercapta2;
     resultado7 = superpoderA > superpoderB;
 
-    printf("Comparando as cartas\n\n");
-    
+    printf("***Comparando as cartas***\n");
+    printf("1 = verdade, 0 = falso\n\n");
+
     printf("População - %c%lu é maior que %c%lu? %d\n", cidade1, codigo1, cidade2, codigo2, resultado1);
     printf("Área - %c%lu é maior que %c%lu? %d\n", cidade1, codigo1, cidade2, codigo2,resultado2);
     printf("PIB - %c%lu é maior que %c%lu? %d\n", cidade1, codigo1, cidade2, codigo2, resultado3);
