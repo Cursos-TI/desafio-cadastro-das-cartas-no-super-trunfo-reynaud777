@@ -7,6 +7,7 @@ char estado1[20];
 char estado2[20];
 char cidade1, cidade2;
 unsigned long int codigo1, codigo2;
+int escolha1, escolha2;
 float area1, area2;
 float pib1, pib2;
 int turismo1, turismo2;
@@ -14,7 +15,8 @@ unsigned long int habitantes1, habitantes2;
 float pibpercapta1, pibpercapta2;
 float densidade1, densidade2;
 float superpoderA, superpoderB;
-int resultado1, resultado2, resultado3, resultado4, resultado5, resultado6, resultado7;
+float soma1, soma2;
+char continua;
 
 //scanf = entrada de dados / interacao com o usuario
 //printf = saída de dados
@@ -75,50 +77,149 @@ densidade2 = (float) habitantes2 / area2;
 superpoderA = (float) (habitantes1 + area1 + turismo1 + pibpercapta1) - densidade1;
 superpoderB = (float) (habitantes2 + area2 + turismo2 + pibpercapta2) - densidade2;
 
-//visualizacao dos dados da cartas
-printf("\n\n Cidade: %c\n", cidade1);
-    printf("Código: %c%lu\n", cidade1, codigo1);
-    printf ("Nome da cidade: %s\n", estado1); 
-    printf("População: %lu\n", habitantes1); 
-    printf("Área: %.2f\n", area1); 
-    printf("PIB: %.2f\n", pib1);
-    printf("Pontos turísticos: %d\n", turismo1);
-    printf("Densidade Populacional:%.2f hab/km²\n", densidade1);
-    printf("PIB per Capita: %.2f reais\n", pibpercapta1);
-    printf("Super Poder: %.2f\n", superpoderA);
+printf("\nComparando as cartas\n\n");
 
-    printf("\n\n Cidade: %c\n", cidade2);
-    printf("Código: %c%lu\n", cidade2, codigo2);
-    printf ("Nome da cidade: %s\n", estado2); 
-    printf("População: %lu\n", habitantes2); 
-    printf("Área: %.2f\n", area2); 
-    printf("PIB: %.2f\n", pib2);
-    printf("Pontos turísticos: %d\n", turismo2);
-    printf("Densidade Populacional:%.2f hab/km²\n", densidade2);
-    printf("PIB per Capita: %.2f reais\n", pibpercapta2);
-    printf("Super Poder: %.2f\n\n", superpoderB);
+    printf("Escolha um dos atributos da carta %c%lu para ser comparado:\n", cidade1, codigo1);
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Pontos Turísticos\n");
+    printf("5. Densidade Populacional\n");
+    printf("6. PIB per Capta\n");
+    printf("7. Super Poder\n");
+    scanf("%d", &escolha1);
 
-    //operadores relacionais
-    //1 = verdadeiro / 0 = falso
-    //maior vence, exceto densidade
-    resultado1 = habitantes1 > habitantes2;
-    resultado2 = area1 > area2;
-    resultado3 = pib1 > pib2;
-    resultado4 = turismo1 > turismo2;
-    resultado5 = densidade1 < densidade2;
-    resultado6 = pibpercapta1 > pibpercapta2;
-    resultado7 = superpoderA > superpoderB;
+    switch (escolha1)
+    {
+    case 1:
+        printf("Você escolheu o atributo: população.\n");
+        break;
+    case 2:
+         printf("Você escolheu o atributo: área.\n");
+         break;
 
-    printf("***Comparando as cartas***\n");
-    printf("1 = verdade, 0 = falso\n\n");
+    case 3:
+         printf("Você escolheu o atributo: PIB.\n");
+    break;
 
-    printf("População - %c%lu é maior que %c%lu? %d\n", cidade1, codigo1, cidade2, codigo2, resultado1);
-    printf("Área - %c%lu é maior que %c%lu? %d\n", cidade1, codigo1, cidade2, codigo2,resultado2);
-    printf("PIB - %c%lu é maior que %c%lu? %d\n", cidade1, codigo1, cidade2, codigo2, resultado3);
-    printf("Turismo - %c%lu é maior que %c%lu? %d\n", cidade1, codigo1, cidade2, codigo2, resultado4);
-    printf("Densidade Populacional - %c%lu é menor que %c%lu? %d\n", cidade1, codigo1, cidade2, codigo2, resultado5);
-    printf("PIB per Capita - %c%lu é maior que %c%lu? %d\n" , cidade1, codigo1, cidade2, codigo2, resultado6);
+    case 4:
+         printf("Você escolheu o atributo: Pontos turísticos.\n");
+    break;
 
+    case 5:
+         printf("Você escolheu o atributo: Densidade Populacional.\n");
+    break;
+
+    case 6:
+         printf("Você escolheu o atributo: PIB per Capita.\n");
+    break;
+
+    case 7:
+         printf("Você escolheu o atributo: Super Poder.\n");
+    break;
+
+    default:
+         printf("Opção inválida.\n");
+        break;
+    }
+
+    printf("\nEscolha um dos atributos da carta %c%lu para ser comparado:\n", cidade2, codigo2);
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Pontos Turísticos\n");
+    printf("5. Densidade Populacional\n");
+    printf("6. PIB per Capta\n");
+    printf("7. Super Poder\n");
+    printf("ATENÇÃO: Você deve estar escolhendo um atributo diferente do escolhido anteriormente.\n");
+    scanf("%d", &escolha2);
+
+
+    switch (escolha1)
+    {
+    case 1:
+        printf("Carta %c%lu (%s) - População | ", cidade1, codigo1, estado1);
+        escolha1 = habitantes1;
+        break;
+    
+    case 2:
+        printf("Carta %c%lu (%s) - Área | ", cidade1, codigo1, estado1);
+        escolha1 = area1;
+    break;
+        
+    case 3:
+        printf("Carta %c%lu (%s) - PIB | ", cidade1, codigo1, estado1);
+        escolha1 = pib1;
+    break;
+
+    case 4:
+        printf("Carta %c%lu (%s) - Pontos Turísticos | ", cidade1, codigo1, estado1);
+        escolha1 = turismo1;
+    break;
+
+    case 5:
+        printf("Carta %c%lu (%s) - Densidade Populacional | ", cidade1, codigo1, estado1);
+        escolha1 = densidade1;
+    break;
+
+    case 6:
+        printf("Carta %c%lu (%s) - PIB per Capita | ", cidade1, codigo1, estado1);
+        escolha1 = pibpercapta1;
+    break;
+    
+    case 7:
+        printf("Carta %c%lu (%s) - Super Poder | ", cidade1, codigo1, estado1);
+        escolha1 = superpoderA;
+    break;
+    
+    default:
+        printf("Opção Inválida. Tente novamente.\n");
+    break;
+
+    }
+
+    switch (escolha2)
+    {
+        case 1:
+        printf("Carta %c%lu (%s) - População\n", cidade2, codigo2, estado2);
+        escolha2 = habitantes2;
+        break;
+    
+    case 2:
+        printf("Carta %c%lu (%s) - Área\n", cidade2, codigo2, estado2);
+        escolha2 = area2;
+    break;
+        
+    case 3:
+        printf("Carta %c%lu (%s) - PIB\n", cidade2, codigo2, estado2);
+        escolha2 = pib2;
+    break;
+
+    case 4:
+        printf("Carta %c%lu (%s) - Pontos Turísticos\n", cidade2, codigo2, estado2);
+        escolha2 = turismo2;
+    break;
+
+    case 5:
+        printf("Carta %c%lu (%s) - Densidade Populacional\n", cidade2, codigo2, estado2);
+        escolha2 = densidade2;
+    break;
+
+    case 6:
+        printf("Carta %c%lu (%s) - PIB per Capita\n", cidade2, codigo2, estado2);
+        escolha2 = pibpercapta2;
+    break;
+    
+    case 7:
+        printf("Carta %c%lu (%s) - Super Poder\n", cidade2, codigo2, estado2);
+        escolha2 = superpoderB;
+    break;
+    
+    default:
+        printf("Opção Inválida. Tente novamente.\n");
+    break;
+
+    }
 
 
 
