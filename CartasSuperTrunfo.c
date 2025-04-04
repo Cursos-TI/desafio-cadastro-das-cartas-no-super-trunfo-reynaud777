@@ -77,6 +77,7 @@ densidade2 = (float) habitantes2 / area2;
 superpoderA = (float) (habitantes1 + area1 + turismo1 + pibpercapta1) - densidade1;
 superpoderB = (float) (habitantes2 + area2 + turismo2 + pibpercapta2) - densidade2;
 
+//comparação das cartas
 printf("\nComparando as cartas\n\n");
 
     printf("Escolha um dos atributos da carta %c%lu para ser comparado:\n", cidade1, codigo1);
@@ -219,8 +220,19 @@ printf("\nComparando as cartas\n\n");
         printf("Opção Inválida. Tente novamente.\n");
     break;
 
+    //resultado da comparação
     }
-
+    if (escolha1 == densidade1 || escolha2 == densidade2){
+        densidade1 < escolha2 || densidade2 > escolha1 ? 
+        printf("A carta %c%lu - (%s) venceu nos atributos comparados!\n\n", cidade1, codigo1, estado1) :
+        printf("A carta %c%lu - (%s) venceu nos atributos comparados!\n\n", cidade2, codigo2, estado2);
+    } else if (escolha1 == escolha2){
+        printf("As cartas empataram nos atributos comparados!\n");
+    } else {   
+        escolha1 > escolha2 ? 
+        printf("A carta %c%lu - (%s) venceu nos atributos comparados!\n\n", cidade1, codigo1, estado1) :
+        printf("A carta %c%lu - (%s) venceu nos atributos comparados!\n\n", cidade2, codigo2, estado2);
+    }
 
 
 }   
