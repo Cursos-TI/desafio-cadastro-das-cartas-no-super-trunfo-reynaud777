@@ -234,5 +234,57 @@ printf("\nComparando as cartas\n\n");
         printf("A carta %c%lu - (%s) venceu nos atributos comparados!\n\n", cidade2, codigo2, estado2);
     }
 
+    printf("Aperte C para realizar a soma dos demais atributos ou N para encerrar o programa.\n");
+    scanf(" %c", &continua);
+
+    switch (continua)
+    {
+    case 'C':
+    case 'c':
+          printf("Somando todos atributos das cartas\n");
+          printf("Vence a que tiver o maior valor!\n");
+
+          printf("\n\n Cidade: %c\n", cidade1);
+          printf("Código: %c%lu\n", cidade1, codigo1);
+          printf ("Nome da cidade: %s\n", estado1); 
+          printf("População: %lu\n", habitantes1); 
+          printf("Área: %.2f\n", area1); 
+          printf("PIB: %.2f\n", pib1);
+          printf("Pontos turísticos: %d\n", turismo1);
+          printf("Densidade Populacional:%.2f hab/km²\n", densidade1);
+          printf("PIB per Capita: %.2f reais\n", pibpercapta1);
+          printf("Super Poder: %.2f\n", superpoderA);
+
+          printf("\n\n Cidade: %c\n", cidade2);
+          printf("Código: %c%lu\n", cidade2, codigo2);
+          printf ("Nome da cidade: %s\n", estado2); 
+          printf("População: %lu\n", habitantes2); 
+          printf("Área: %.2f\n", area2); 
+          printf("PIB: %.2f\n", pib2);
+          printf("Pontos turísticos: %d\n", turismo2);
+          printf("Densidade Populacional:%.2f hab/km²\n", densidade2);
+          printf("PIB per Capita: %.2f reais\n", pibpercapta2);
+          printf("Super Poder: %.2f\n\n", superpoderB);
+
+          soma1 = (habitantes1 + area1 + pib1 + turismo1 + densidade1 + pibpercapta1 + superpoderA);
+          soma2 = (habitantes2 + area2 + pib2 + turismo2 + densidade2 + pibpercapta2 + superpoderB);
+
+          printf("Soma dos atributos da carta 1: %.2f\n", soma1);
+          printf("Soma dos atributos da carta 2: %.2f\n\n", soma2);
+
+    if (soma1 > soma2){
+        printf("Carta %c%lu - (%s) venceu!\n", cidade1, codigo1, estado1);
+    } else if (soma1 < soma2){
+        printf("Carta %c%lu - (%s) venceu!\n", cidade2, codigo2, estado2);
+    } else {
+        printf("As cartas empataram!\n");
+    }
+        break;
+
+    case 'N':
+    case 'n':
+        printf("Programa encerrado.\n");
+    break;
+    }
 
 }   
