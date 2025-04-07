@@ -132,7 +132,6 @@ printf("\nComparando as cartas\n\n");
     printf("5. Densidade Populacional\n");
     printf("6. PIB per Capta\n");
     printf("7. Super Poder\n");
-    printf("ATENÇÃO: Você deve estar escolhendo um atributo diferente do escolhido anteriormente.\n");
     scanf("%d", &escolha2);
 
 
